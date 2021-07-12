@@ -1,0 +1,12 @@
+
+<div class="card " [ngClass]="{'done':todo.active}">
+    <div class="card-body">
+      <h5 class="card-title"> Title: {{todo.title}}</h5>
+      <p class="card-text">{{todo.decription}}</p>
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" [checked]="todo.active" (click)="onCheckBoxClick(todo)" name="active">
+        <label class="form-check-label">Done</label>
+      </div>
+      <button class="btn btn-danger" (click)="onClick(todo)">Delete</button>
+    </div>
+  </div>
